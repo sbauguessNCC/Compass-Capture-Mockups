@@ -13,13 +13,11 @@
   <link href="css/Overrides.css" rel="stylesheet">
   <link href="css/Compass.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
-
-
-
+  
 </head>
-  <body>
-<main>
+
+<body>
+  
 
     <!-- This is the START of the Header-->
     <div class="container-fluid menu-border-bottom">
@@ -71,6 +69,7 @@
     </div>
     <!-- This is the END of the Header-->
     <!-- This is the START of the the body-->
+    <main>
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-1">
@@ -79,17 +78,21 @@
         <div class="col-md-11 py-2 py-md-5">
           <div class="container-fluid">
             <h3>Walla Walla (Oracle Cerner Deployment CSR Compass Demo) Site Service Validation (Category Value)</h3>
+            
+<!-- Dismissable block for instrucsions-->
+<div class="collapse show" id="collapseExample">
             <div class="alert alert-primary alert-dismissible fade show" role="alert">
-
               <h4>Instructions</h4>
               A list of signup instructions goes here. If needed this can be a collapsible area for longer instructions.
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
               laoreet dolore magna aliquam erat volutpat.
 
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              <button type="button" class="btn-close" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></button>
             </div>
-
-
+</div>
+<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  <i class="bi bi-info-circle"></i>
+</button>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newCompassCapture"><i
                 class="bi bi-plus-square"></i> Create New Compass Capture</button>
 
@@ -363,7 +366,7 @@
         </div>
       </div>
     </div>
-    
+
     <!--MODAL Related Captures Display-->
 
     <div class="modal fade  modal-xl" id="relatedCapturesModal" tabindex="-1"
@@ -841,279 +844,275 @@
 
 
     <!-- MODALS Create New Action Capture -->
-  
-    <div class="modal fade modal-xl " id="newActionCapture" tabindex="-1"
-    aria-labelledby="newActionCaptureLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+
+    <div class="modal fade modal-xl " id="newActionCapture" tabindex="-1" aria-labelledby="newActionCaptureLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="newActionCaptureLabel">Create New Action Capture</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="newActionCaptureLabel">Create New Action Capture</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="captureIDList" class="form-label">Capture ID</label>
+              <div class="input-group ">
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+                <input class="form-control" list="datalistOptions" id="captureIDList" placeholder="Type to search...">
+                <datalist id="datalistOptions">
+                  <option value="Rehab Services">
+                  <option value="Nursing Services">
+                  <option value="Pharmacy Services">
+                  <option value="Option 1">
+                  <option value="Option 1">
+                </datalist>
+              </div>
             </div>
-            <div class="modal-body">
-                <div class="mb-3">
-                    <label for="captureIDList" class="form-label">Capture ID</label>
-                    <div class="input-group ">
-                        <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
-                        <input class="form-control" list="datalistOptions" id="captureIDList"
-                            placeholder="Type to search...">
-                        <datalist id="datalistOptions">
-                            <option value="Rehab Services">
-                            <option value="Nursing Services">
-                            <option value="Pharmacy Services">
-                            <option value="Option 1">
-                            <option value="Option 1">
-                        </datalist>
-                    </div>
-                </div>
-                <div class="row">
-                <!--Action Description-->
-                <div class="col-6 mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Action Description</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <!--Dependency-->
-                <div class="col-6 mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Dependency</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
+            <div class="row">
+              <!--Action Description-->
+              <div class="col-6 mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Action Description</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <!--Dependency-->
+              <div class="col-6 mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Dependency</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
             </div>
-                <!--Assigned to-->
-                <div class="mb-3">
-                    <label for="assignedToList" class="form-label">Assigned to</label>
-                    <div class="input-group ">
-                        <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
-                        <input class="form-control" list="datalistOptions" id="assignedToList"
-                            placeholder="Type to search...">
-                        <datalist id="datalistOptions">
-                            <option value="Name Lastname 1">
-                            <option value="Name Lastname 2">
-                            <option value="Name Lastname 3">
-                        </datalist>
-                    </div>
-                </div>
-                <!--Date row-->
-                <div class="row">
-                    <!--Target Date-->
-                    <div class="col-6 mb-3">
-                        <label for="targetDate" class="form-label">Target Date</label>
-                        <div class="input-group">
+            <!--Assigned to-->
+            <div class="mb-3">
+              <label for="assignedToList" class="form-label">Assigned to</label>
+              <div class="input-group ">
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+                <input class="form-control" list="datalistOptions" id="assignedToList" placeholder="Type to search...">
+                <datalist id="datalistOptions">
+                  <option value="Name Lastname 1">
+                  <option value="Name Lastname 2">
+                  <option value="Name Lastname 3">
+                </datalist>
+              </div>
+            </div>
+            <!--Date row-->
+            <div class="row">
+              <!--Target Date-->
+              <div class="col-6 mb-3">
+                <label for="targetDate" class="form-label">Target Date</label>
+                <div class="input-group">
 
-                            <button class="btn btn-outline-secondary dropdown-toggle" type="button"
-                                data-bs-toggle="dropdown" aria-expanded="false"><i
-                                    class="bi bi-calendar-date"></i></button>
-                            <div class="dropdown-menu p-2 mx-0 shadow rounded-3" style="width: 340px;"
-                                data-bs-theme="light">
-                                <div class="d-grid gap-1">
+                  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false"><i class="bi bi-calendar-date"></i></button>
+                  <div class="dropdown-menu p-2 mx-0 shadow rounded-3" style="width: 340px;" data-bs-theme="light">
+                    <div class="d-grid gap-1">
 
-                                    <!--CALENDAR-->
-                                    <div class="cal">
-                                        <div class="cal-month">
-                                            <button class="btn cal-btn" type="button">
-                                                <i class="bi bi-arrow-left"></i>
+                      <!--CALENDAR-->
+                      <div class="cal">
+                        <div class="cal-month">
+                          <button class="btn cal-btn" type="button">
+                            <i class="bi bi-arrow-left"></i>
 
-                                            </button>
-                                            <strong class="cal-month-name">June</strong>
-                                            <select class="form-select cal-month-name d-none">
-                                                <option value="January">January</option>
-                                                <option value="February">February</option>
-                                                <option value="March">March</option>
-                                                <option value="April">April</option>
-                                                <option value="May">May</option>
-                                                <option selected="" value="June">June</option>
-                                                <option value="July">July</option>
-                                                <option value="August">August</option>
-                                                <option value="September">September</option>
-                                                <option value="October">October</option>
-                                                <option value="November">November</option>
-                                                <option value="December">December</option>
-                                            </select>
-                                            <button class="btn cal-btn" type="button">
-                                                <i class="bi bi-arrow-right"></i>
+                          </button>
+                          <strong class="cal-month-name">June</strong>
+                          <select class="form-select cal-month-name d-none">
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option selected="" value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                          </select>
+                          <button class="btn cal-btn" type="button">
+                            <i class="bi bi-arrow-right"></i>
 
-                                            </button>
-                                        </div>
-                                        <div class="cal-weekdays text-body-secondary">
-                                            <div class="cal-weekday">Sun</div>
-                                            <div class="cal-weekday">Mon</div>
-                                            <div class="cal-weekday">Tue</div>
-                                            <div class="cal-weekday">Wed</div>
-                                            <div class="cal-weekday">Thu</div>
-                                            <div class="cal-weekday">Fri</div>
-                                            <div class="cal-weekday">Sat</div>
-                                        </div>
-                                        <div class="cal-days">
-                                            <button class="btn cal-btn" disabled="" type="button">30</button>
-                                            <button class="btn cal-btn" disabled="" type="button">31</button>
-
-                                            <button class="btn cal-btn" type="button">1</button>
-                                            <button class="btn cal-btn" type="button">2</button>
-                                            <button class="btn cal-btn" type="button">3</button>
-                                            <button class="btn cal-btn" type="button">4</button>
-                                            <button class="btn cal-btn" type="button">5</button>
-                                            <button class="btn cal-btn" type="button">6</button>
-                                            <button class="btn cal-btn" type="button">7</button>
-
-                                            <button class="btn cal-btn" type="button">8</button>
-                                            <button class="btn cal-btn" type="button">9</button>
-                                            <button class="btn cal-btn" type="button">10</button>
-                                            <button class="btn cal-btn" type="button">11</button>
-                                            <button class="btn cal-btn" type="button">12</button>
-                                            <button class="btn cal-btn" type="button">13</button>
-                                            <button class="btn cal-btn" type="button">14</button>
-
-                                            <button class="btn cal-btn" type="button">15</button>
-                                            <button class="btn cal-btn" type="button">16</button>
-                                            <button class="btn cal-btn" type="button">17</button>
-                                            <button class="btn cal-btn" type="button">18</button>
-                                            <button class="btn cal-btn" type="button">19</button>
-                                            <button class="btn cal-btn" type="button">20</button>
-                                            <button class="btn cal-btn" type="button">21</button>
-
-                                            <button class="btn cal-btn" type="button">22</button>
-                                            <button class="btn cal-btn" type="button">23</button>
-                                            <button class="btn cal-btn" type="button">24</button>
-                                            <button class="btn cal-btn" type="button">25</button>
-                                            <button class="btn cal-btn" type="button">26</button>
-                                            <button class="btn cal-btn" type="button">27</button>
-                                            <button class="btn cal-btn" type="button">28</button>
-
-                                            <button class="btn cal-btn" type="button">29</button>
-                                            <button class="btn cal-btn" type="button">30</button>
-                                            <button class="btn cal-btn" type="button">31</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <input type="text" class="form-control" aria-label="Text input with dropdown button"
-                                id="targetDate">
+                          </button>
                         </div>
-                    </div>
-                    <!--Actual Completion Date-->
-                    <div class="col-6 mb-3">
-                        <label for="targetDate" class="form-label">Actual Completion Date</label>
-                        <div class="input-group">
-
-                            <button class="btn btn-outline-secondary dropdown-toggle" type="button"
-                                data-bs-toggle="dropdown" aria-expanded="false"><i
-                                    class="bi bi-calendar-date"></i></button>
-                            <div class="dropdown-menu p-2 mx-0 shadow rounded-3" style="width: 340px;"
-                                data-bs-theme="light">
-                                <div class="d-grid gap-1">
-
-                                    <!--CALENDAR-->
-                                    <div class="cal">
-                                        <div class="cal-month">
-                                            <button class="btn cal-btn" type="button">
-                                                <i class="bi bi-arrow-left"></i>
-
-                                            </button>
-                                            <strong class="cal-month-name">June</strong>
-                                            <select class="form-select cal-month-name d-none">
-                                                <option value="January">January</option>
-                                                <option value="February">February</option>
-                                                <option value="March">March</option>
-                                                <option value="April">April</option>
-                                                <option value="May">May</option>
-                                                <option selected="" value="June">June</option>
-                                                <option value="July">July</option>
-                                                <option value="August">August</option>
-                                                <option value="September">September</option>
-                                                <option value="October">October</option>
-                                                <option value="November">November</option>
-                                                <option value="December">December</option>
-                                            </select>
-                                            <button class="btn cal-btn" type="button">
-                                                <i class="bi bi-arrow-right"></i>
-
-                                            </button>
-                                        </div>
-                                        <div class="cal-weekdays text-body-secondary">
-                                            <div class="cal-weekday">Sun</div>
-                                            <div class="cal-weekday">Mon</div>
-                                            <div class="cal-weekday">Tue</div>
-                                            <div class="cal-weekday">Wed</div>
-                                            <div class="cal-weekday">Thu</div>
-                                            <div class="cal-weekday">Fri</div>
-                                            <div class="cal-weekday">Sat</div>
-                                        </div>
-                                        <div class="cal-days">
-                                            <button class="btn cal-btn" disabled="" type="button">30</button>
-                                            <button class="btn cal-btn" disabled="" type="button">31</button>
-
-                                            <button class="btn cal-btn" type="button">1</button>
-                                            <button class="btn cal-btn" type="button">2</button>
-                                            <button class="btn cal-btn" type="button">3</button>
-                                            <button class="btn cal-btn" type="button">4</button>
-                                            <button class="btn cal-btn" type="button">5</button>
-                                            <button class="btn cal-btn" type="button">6</button>
-                                            <button class="btn cal-btn" type="button">7</button>
-
-                                            <button class="btn cal-btn" type="button">8</button>
-                                            <button class="btn cal-btn" type="button">9</button>
-                                            <button class="btn cal-btn" type="button">10</button>
-                                            <button class="btn cal-btn" type="button">11</button>
-                                            <button class="btn cal-btn" type="button">12</button>
-                                            <button class="btn cal-btn" type="button">13</button>
-                                            <button class="btn cal-btn" type="button">14</button>
-
-                                            <button class="btn cal-btn" type="button">15</button>
-                                            <button class="btn cal-btn" type="button">16</button>
-                                            <button class="btn cal-btn" type="button">17</button>
-                                            <button class="btn cal-btn" type="button">18</button>
-                                            <button class="btn cal-btn" type="button">19</button>
-                                            <button class="btn cal-btn" type="button">20</button>
-                                            <button class="btn cal-btn" type="button">21</button>
-
-                                            <button class="btn cal-btn" type="button">22</button>
-                                            <button class="btn cal-btn" type="button">23</button>
-                                            <button class="btn cal-btn" type="button">24</button>
-                                            <button class="btn cal-btn" type="button">25</button>
-                                            <button class="btn cal-btn" type="button">26</button>
-                                            <button class="btn cal-btn" type="button">27</button>
-                                            <button class="btn cal-btn" type="button">28</button>
-
-                                            <button class="btn cal-btn" type="button">29</button>
-                                            <button class="btn cal-btn" type="button">30</button>
-                                            <button class="btn cal-btn" type="button">31</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <input type="text" class="form-control" aria-label="Text input with dropdown button"
-                                id="targetDate">
+                        <div class="cal-weekdays text-body-secondary">
+                          <div class="cal-weekday">Sun</div>
+                          <div class="cal-weekday">Mon</div>
+                          <div class="cal-weekday">Tue</div>
+                          <div class="cal-weekday">Wed</div>
+                          <div class="cal-weekday">Thu</div>
+                          <div class="cal-weekday">Fri</div>
+                          <div class="cal-weekday">Sat</div>
                         </div>
-                    </div>
-                </div>
-                <!--Action Status-->
-                <div class="mb-3">
-                <label for="actionStatus" class="form-label">Action Status</label>
-                <select class="form-select" aria-label="Default select example" id="actionStatus">
-                    <option selected>Action Status</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                </div>
-                
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Reference</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
+                        <div class="cal-days">
+                          <button class="btn cal-btn" disabled="" type="button">30</button>
+                          <button class="btn cal-btn" disabled="" type="button">31</button>
 
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Comments</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                          <button class="btn cal-btn" type="button">1</button>
+                          <button class="btn cal-btn" type="button">2</button>
+                          <button class="btn cal-btn" type="button">3</button>
+                          <button class="btn cal-btn" type="button">4</button>
+                          <button class="btn cal-btn" type="button">5</button>
+                          <button class="btn cal-btn" type="button">6</button>
+                          <button class="btn cal-btn" type="button">7</button>
+
+                          <button class="btn cal-btn" type="button">8</button>
+                          <button class="btn cal-btn" type="button">9</button>
+                          <button class="btn cal-btn" type="button">10</button>
+                          <button class="btn cal-btn" type="button">11</button>
+                          <button class="btn cal-btn" type="button">12</button>
+                          <button class="btn cal-btn" type="button">13</button>
+                          <button class="btn cal-btn" type="button">14</button>
+
+                          <button class="btn cal-btn" type="button">15</button>
+                          <button class="btn cal-btn" type="button">16</button>
+                          <button class="btn cal-btn" type="button">17</button>
+                          <button class="btn cal-btn" type="button">18</button>
+                          <button class="btn cal-btn" type="button">19</button>
+                          <button class="btn cal-btn" type="button">20</button>
+                          <button class="btn cal-btn" type="button">21</button>
+
+                          <button class="btn cal-btn" type="button">22</button>
+                          <button class="btn cal-btn" type="button">23</button>
+                          <button class="btn cal-btn" type="button">24</button>
+                          <button class="btn cal-btn" type="button">25</button>
+                          <button class="btn cal-btn" type="button">26</button>
+                          <button class="btn cal-btn" type="button">27</button>
+                          <button class="btn cal-btn" type="button">28</button>
+
+                          <button class="btn cal-btn" type="button">29</button>
+                          <button class="btn cal-btn" type="button">30</button>
+                          <button class="btn cal-btn" type="button">31</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <input type="text" class="form-control" aria-label="Text input with dropdown button" id="targetDate">
                 </div>
+              </div>
+              <!--Actual Completion Date-->
+              <div class="col-6 mb-3">
+                <label for="targetDate" class="form-label">Actual Completion Date</label>
+                <div class="input-group">
+
+                  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false"><i class="bi bi-calendar-date"></i></button>
+                  <div class="dropdown-menu p-2 mx-0 shadow rounded-3" style="width: 340px;" data-bs-theme="light">
+                    <div class="d-grid gap-1">
+
+                      <!--CALENDAR-->
+                      <div class="cal">
+                        <div class="cal-month">
+                          <button class="btn cal-btn" type="button">
+                            <i class="bi bi-arrow-left"></i>
+
+                          </button>
+                          <strong class="cal-month-name">June</strong>
+                          <select class="form-select cal-month-name d-none">
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option selected="" value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                          </select>
+                          <button class="btn cal-btn" type="button">
+                            <i class="bi bi-arrow-right"></i>
+
+                          </button>
+                        </div>
+                        <div class="cal-weekdays text-body-secondary">
+                          <div class="cal-weekday">Sun</div>
+                          <div class="cal-weekday">Mon</div>
+                          <div class="cal-weekday">Tue</div>
+                          <div class="cal-weekday">Wed</div>
+                          <div class="cal-weekday">Thu</div>
+                          <div class="cal-weekday">Fri</div>
+                          <div class="cal-weekday">Sat</div>
+                        </div>
+                        <div class="cal-days">
+                          <button class="btn cal-btn" disabled="" type="button">30</button>
+                          <button class="btn cal-btn" disabled="" type="button">31</button>
+
+                          <button class="btn cal-btn" type="button">1</button>
+                          <button class="btn cal-btn" type="button">2</button>
+                          <button class="btn cal-btn" type="button">3</button>
+                          <button class="btn cal-btn" type="button">4</button>
+                          <button class="btn cal-btn" type="button">5</button>
+                          <button class="btn cal-btn" type="button">6</button>
+                          <button class="btn cal-btn" type="button">7</button>
+
+                          <button class="btn cal-btn" type="button">8</button>
+                          <button class="btn cal-btn" type="button">9</button>
+                          <button class="btn cal-btn" type="button">10</button>
+                          <button class="btn cal-btn" type="button">11</button>
+                          <button class="btn cal-btn" type="button">12</button>
+                          <button class="btn cal-btn" type="button">13</button>
+                          <button class="btn cal-btn" type="button">14</button>
+
+                          <button class="btn cal-btn" type="button">15</button>
+                          <button class="btn cal-btn" type="button">16</button>
+                          <button class="btn cal-btn" type="button">17</button>
+                          <button class="btn cal-btn" type="button">18</button>
+                          <button class="btn cal-btn" type="button">19</button>
+                          <button class="btn cal-btn" type="button">20</button>
+                          <button class="btn cal-btn" type="button">21</button>
+
+                          <button class="btn cal-btn" type="button">22</button>
+                          <button class="btn cal-btn" type="button">23</button>
+                          <button class="btn cal-btn" type="button">24</button>
+                          <button class="btn cal-btn" type="button">25</button>
+                          <button class="btn cal-btn" type="button">26</button>
+                          <button class="btn cal-btn" type="button">27</button>
+                          <button class="btn cal-btn" type="button">28</button>
+
+                          <button class="btn cal-btn" type="button">29</button>
+                          <button class="btn cal-btn" type="button">30</button>
+                          <button class="btn cal-btn" type="button">31</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <input type="text" class="form-control" aria-label="Text input with dropdown button" id="targetDate">
+                </div>
+              </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#relatedCapturesModal">Add new capture item</button>
-               
+            <!--Action Status-->
+            <div class="mb-3">
+              <label for="actionStatus" class="form-label">Action Status</label>
+              <select class="form-select" aria-label="Default select example" id="actionStatus">
+                <option selected>Action Status</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
             </div>
+
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Reference</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Comments</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+              data-bs-target="#relatedCapturesModal">Add new capture item</button>
+
+          </div>
         </div>
+      </div>
     </div>
-</div>
+
+
+    <!-- END MODALS -->
 
     <!-- This is the START of the Footer-->
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 compass-footer  ">
@@ -1129,5 +1128,5 @@
 
 
     <script src="js/bootstrap.bundle.min.js"></script>
-</main>
+  </main>
 </body>
