@@ -145,13 +145,19 @@
 
   .compass-truncate-three-line {
     display: -webkit-box;
+    max-height: 78px;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
+    transition: max-height 0.5s ease-out;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
-
+  .compass-three-line-scroll {
+    height: 100px;
+    /* margin-top: .5rem; */
+    overflow: auto;}
+  
 /*This is an area to help with a breakpoint that matches md in bootstrap*/
 @media (max-width: 767px) {
     .custom-logo {
